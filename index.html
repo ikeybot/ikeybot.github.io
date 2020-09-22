@@ -94,28 +94,28 @@
 							<div class="tm-command-categories">
 								<nav id="tmCommandsNav" class="tm-commands-nav">
 									<ul>
-										<a href="#action" class="tm-admin-category" data-bg-img="background.jpg" data-page="#tm-commands-action">
+										<a href="#action" id="tmCategoryAction" data-bg-img="background.jpg" data-page="#tm-commands-action">
 												<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Action</h5>
 										</a>
-										<a href="#admin" class="tm-admin-category" data-bg-img="background.jpg" data-page="#tm-commands-admin">
+										<a href="#admin" id="tmCategoryAdmin" data-bg-img="background.jpg" data-page="#tm-commands-admin">
 												<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Admin</h5>
 										</a>
-										<a href="#general" class="tm-general-category" data-bg-img="background.jpg" data-page="#tm-commands-general">
+										<a href="#general" id="tmCategoryGeneral" data-bg-img="background.jpg" data-page="#tm-commands-general">
 												<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>General</h5>
 										</a>
-										<a href="#guild" class="tm-guild-category" data-bg-img="background.jpg" data-page="#tm-commands-guild">
+										<a href="#guild" id="tmCategoryGuild" data-bg-img="background.jpg" data-page="#tm-commands-guild">
 												<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Guild</h5>
 										</a>
-										<a href="#image" class="tm-image-category" data-bg-img="background.jpg" data-page="#tm-commands-image">
+										<a href="#image" id="tmCategoryImage" data-bg-img="background.jpg" data-page="#tm-commands-image">
 												<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Image</h5>
 										</a>
-										<a href="#info" class="tm-info-category" data-bg-img="background.jpg" data-page="#tm-commands-info">
+										<a href="#info" id="tmCategoryInfo" data-bg-img="background.jpg" data-page="#tm-commands-info">
 												<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Info</h5>
 										</a>
-										<a href="#nsfw" class="tm-nsfw-category" data-bg-img="background.jpg" data-page="#tm-commands-nsfw">
+										<a href="#nsfw" id="tmCategoryNsfw" data-bg-img="background.jpg" data-page="#tm-commands-nsfw">
 												<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>NSFW</h5>
 										</a>
-										<a href="#tag" class="tm-tag-category" data-bg-img="background.jpg" data-page="#tm-commands-tag">
+										<a href="#tag" id="tmCategoryTag" data-bg-img="background.jpg" data-page="#tm-commands-tag">
 												<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Tag</h5>
 										</a>
 									</ul>
@@ -237,23 +237,6 @@
 					$("#tmSidebar").removeClass("show");
 				});	    
 			}
-
-			// Setup CommandsNav
-			function setupCommandsNav() {
-				// Add Event Listener to each Nav item
-				$(".tm-commands-nav a").click(function(e){
-					e.preventDefault();
-
-					var currentCommandsNavItem = $(this);
-					changeCommandList(currentCommandsNavItem);
-
-					setupSidebarNav();
-					setupFooter();
-
-					// Hide the nav on mobile
-					$("#tmSidebar").removeClass("show");
-				});	    
-			}
 			
 			function changePage(currentSidebarNavItem) {
 				// Update SidebarNav items
@@ -268,22 +251,6 @@
 
 				// Change background image
 				var bgImg = currentSidebarNavItem.data("bgImg");
-				$.backstretch("img/" + bgImg);		    	
-			}
-
-			function changeCommandsList(currentCommandsNavItem) {
-				// Update CommandsNav items
-				$(".tm-commands-nav a").removeClass("active");
-				currentCommandsNavItem.addClass("active");
-				
-				$(currentPageID).hide();
-
-				// Show current page
-				currentPageID = currentCommandsNavItem.data("page");
-				$(currentPageID).fadeIn(1000);
-
-				// Change background image
-				var bgImg = currentCommandsNavItem.data("bgImg");
 				$.backstretch("img/" + bgImg);		    	
 			}
 
@@ -353,7 +320,6 @@
 
 					// Setup Nav, Nav Toggle and Footer
 					setupSidebarNav();
-					setupCommandsNav();
 					setupSidebarNavToggle();
 					setupFooter();
 
