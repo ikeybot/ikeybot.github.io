@@ -222,7 +222,7 @@
 			var sidebarVisible = false;
 			var currentPageID = "#tm-home";
 			
-			// Setup Nav1
+			// Setup SidebarNav
 			function setupSidebarNav() {
 				// Add Event Listener to each Nav item
 				$(".tm-sidebar-nav a").click(function(e){
@@ -231,6 +231,23 @@
 					var currentSidebarNavItem = $(this);
 					changePage(currentSidebarNavItem);
 
+					setupFooter();
+
+					// Hide the nav on mobile
+					$("#tmSidebar").removeClass("show");
+				});	    
+			}
+
+			// Setup CommandsNav
+			function setupCommandsNav() {
+				// Add Event Listener to each Nav item
+				$(".tm-commands-nav a").click(function(e){
+					e.preventDefault();
+
+					var currentCommandsNavItem = $(this);
+					changeCommandList(currentCommandsNavItem);
+
+					setupSidebarNav();
 					setupFooter();
 
 					// Hide the nav on mobile
@@ -254,11 +271,24 @@
 				$.backstretch("img/" + bgImg);		    	
 			}
 
+			function changeCommandsList(currentCommandsNavItem) {
+				// Update CommandsNav items
+				$(".tm-commands-nav a").removeClass("active");
+				currentCommandsNavItem.addClass("active");
+				
+				$(currentPageID).hide();
 
+				// Show current page
+				currentPageID = currentCommandsNavItem.data("page");
+				$(currentPageID).fadeIn(1000);
 
-			// Setup Nav1 Toggle Button
+				// Change background image
+				var bgImg = currentCommandsNavItem.data("bgImg");
+				$.backstretch("img/" + bgImg);		    	
+			}
+
+			// Setup SidebarNav Toggle Button
 			function setupSidebarNavToggle() {
-
 				$("#tmSidebarNavToggle").on("click", function(){
 					$(".sidebar").toggleClass("show");
 				});
@@ -321,8 +351,9 @@
 
 					$.backstretch("img/" + bgImg, {fade: 500});
 
-					// Setup Carousel, Nav, and Nav Toggle
+					// Setup Nav, Nav Toggle and Footer
 					setupSidebarNav();
+					setupCommandsNav();
 					setupSidebarNavToggle();
 					setupFooter();
 
