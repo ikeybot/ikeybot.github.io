@@ -166,8 +166,8 @@
 									<div class="media-body">
 										<h3>Contact</h3>
 										<ul>
-											<h5><a href="https://discord.com/channels/@me/341086875232108545">ikey.#0911</a></h5>
-											<h5><a href="mailto:ikeygardner10@gmail.com?subject=IkeyBot%20Support%20Query">ikeygardner10@gmail.com</a></h5>
+											<h5>ikey.#0911</h5>
+											<h5><a href="mailto:ikeygardner10@gmail.com?subject=IkeyBot%20Support%20Query" target="_blank">ikeygardner10@gmail.com</a></h5>
 										</ul>
 									</div>
 								</div>
@@ -223,13 +223,13 @@
 			var currentPageID = "#tm-home";
 			
 			// Setup Nav1
-			function setupNav1() {
+			function setupSidebarNav() {
 				// Add Event Listener to each Nav item
 				$(".tm-sidebar-nav a").click(function(e){
 					e.preventDefault();
 
-					var currentNavItem = $(this);
-					changePage(currentNavItem);
+					var currentSidebarNavItem = $(this);
+					changePage(currentSidebarNavItem);
 
 					setupFooter();
 
@@ -238,24 +238,26 @@
 				});	    
 			}
 			
-			function changePage(currentNavItem) {
-				// Update Nav1 items
+			function changePage(currentSidebarNavItem) {
+				// Update SidebarNav items
 				$(".tm-sidebar-nav a").removeClass("active");
-				currentNavItem.addClass("active");
+				currentSidebarNavItem.addClass("active");
 				
 				$(currentPageID).hide();
 
 				// Show current page
-				currentPageID = currentNavItem.data("page");
+				currentPageID = currentSidebarNavItem.data("page");
 				$(currentPageID).fadeIn(1000);
 
 				// Change background image
-				var bgImg = currentNavItem.data("bgImg");
+				var bgImg = currentSidebarNavItem.data("bgImg");
 				$.backstretch("img/" + bgImg);		    	
 			}
 
+
+
 			// Setup Nav1 Toggle Button
-			function setupNavToggle1() {
+			function setupSidebarNavToggle() {
 
 				$("#tmSidebarNavToggle").on("click", function(){
 					$(".sidebar").toggleClass("show");
@@ -320,8 +322,8 @@
 					$.backstretch("img/" + bgImg, {fade: 500});
 
 					// Setup Carousel, Nav, and Nav Toggle
-					setupNav1();
-					setupNavToggle1();
+					setupSidebarNav();
+					setupSidebarNavToggle();
 					setupFooter();
 
 					// Resize Footer upon window resize
