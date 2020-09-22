@@ -237,6 +237,37 @@
 					$("#tmSidebar").removeClass("show");
 				});	    
 			}
+
+			function setupCommandsNav() {
+				// Add Event Listener to each Nav item
+				$(".tm-commands-nav a").click(function(e){
+					// e.preventDefault();
+
+					var currentCommandNavItem = $(this);
+					changeCommandList(currentCommandNavItem);
+
+					setupFooter();
+
+					// Hide the nav on mobile
+					$("#tmSidebar").removeClass("show");
+				});
+			}
+
+			function changeCommandList(currentCommandNavItem) {
+				// Update SidebarNav items
+				$(".tm-sidebar-nav a").removeClass("active");
+
+				// Hide current page
+				$(currentPageID).hide();
+
+				// Define current page as newly selected nav item, fade in
+				currentPageID = currentCommandsNavItem.data("page");
+				$(currentPageID).fadeIn(1000);
+
+				// Change background image
+				var bgImg = currentCommandsNavItem.data("bgImg");
+				$.backstretch("./img/" + bgImg);
+			}
 			
 			function changePage(currentSidebarNavItem) {
 				// Update SidebarNav items
@@ -295,18 +326,18 @@
 					// Page transition
 					var allPages = $(".tm-section");
 
-					// Handle click of "Continue", which changes to next page
-					// The link contains data-nav-link attribute, which holds the nav item ID
-					// Nav item ID is then used to access and trigger click on the corresponding nav item
-					var linkToAnotherPage = $("a.tm-btn[data-nav-link]");
+					// // Handle click of "Continue", which changes to next page
+					// // The link contains data-nav-link attribute, which holds the nav item ID
+					// // Nav item ID is then used to access and trigger click on the corresponding nav item
+					// var linkToAnotherPage = $("a.tm-btn[data-nav-link]");
 
-					if(linkToAnotherPage != null) {
+					// if(linkToAnotherPage != null) {
 
-						linkToAnotherPage.on("click", function(){
-							var navItemToHighlight = linkToAnotherPage.data("navLink");
-							$("a" + navItemToHighlight).click();
-						});
-					}
+					// 	linkToAnotherPage.on("click", function(){
+					// 		var navItemToHighlight = linkToAnotherPage.data("navLink");
+					// 		$("a" + navItemToHighlight).click();
+					// 	});
+					// }
 
 					// Hide all pages
 					allPages.hide();
