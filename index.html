@@ -90,32 +90,31 @@
 						<div class="ml-auto">
 						<header class="mb-4"><h2 class="tm-text-shadow">Commands</h2></header>
 						<section class="tm-default-prefix"><h5>Default Prefix: $ -- All commands are lowercase.</h5></section>
-							<button id="tmCommandsNavToggle" class="menu-icon">&#9776;</button>
-							<div class="tm-command-categories">
+							<div class="tm-command-categories" data-bg-img="background.jpg" data-page="#tm-commands-categories">
 								<nav id="tmCommandsNav" class="tm-commands-nav">
 									<ul>
-										<a href="#action" id="tmCategoryAction" class="commands-list-button" data-bg-img="background.jpg" data-page="#tm-commands-action">
+										<a href="#action" id="tmCategoryAction" class="commands-list" data-bg-img="background.jpg" data-page="#tm-commands-action">
 												<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Action</h5>
 										</a>
-										<a href="#admin" id="tmCategoryAdmin" class="commands-list-button" data-bg-img="background.jpg" data-page="#tm-commands-admin">
+										<a href="#admin" id="tmCategoryAdmin" class="commands-list" data-bg-img="background.jpg" data-page="#tm-commands-admin">
 												<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Admin</h5>
 										</a>
-										<a href="#general" id="tmCategoryGeneral" class="commands-list-button" data-bg-img="background.jpg" data-page="#tm-commands-general">
+										<a href="#general" id="tmCategoryGeneral" class="commands-list" data-bg-img="background.jpg" data-page="#tm-commands-general">
 												<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>General</h5>
 										</a>
-										<a href="#guild" id="tmCategoryGuild" class="commands-list-button" data-bg-img="background.jpg" data-page="#tm-commands-guild">
+										<a href="#guild" id="tmCategoryGuild" class="commands-list" data-bg-img="background.jpg" data-page="#tm-commands-guild">
 												<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Guild</h5>
 										</a>
-										<a href="#image" id="tmCategoryImage" class="commands-list-button" data-bg-img="background.jpg" data-page="#tm-commands-image">
+										<a href="#image" id="tmCategoryImage" class="commands-list" data-bg-img="background.jpg" data-page="#tm-commands-image">
 												<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Image</h5>
 										</a>
-										<a href="#info" id="tmCategoryInfo" class="commands-list-button" data-bg-img="background.jpg" data-page="#tm-commands-info">
+										<a href="#info" id="tmCategoryInfo" class="commands-list" data-bg-img="background.jpg" data-page="#tm-commands-info">
 												<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Info</h5>
 										</a>
-										<a href="#nsfw" id="tmCategoryNsfw" class="commands-list-button" data-bg-img="background.jpg" data-page="#tm-commands-nsfw">
+										<a href="#nsfw" id="tmCategoryNsfw" class="commands-list" data-bg-img="background.jpg" data-page="#tm-commands-nsfw">
 												<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>NSFW</h5>
 										</a>
-										<a href="#tag" id="tmCategoryTag" class="commands-list-button" data-bg-img="background.jpg" data-page="#tm-commands-tag">
+										<a href="#tag" id="tmCategoryTag" class="commands-list" data-bg-img="background.jpg" data-page="#tm-commands-tag">
 												<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Tag</h5>
 										</a>
 									</ul>
@@ -221,6 +220,7 @@
 
 			var sidebarVisible = false;
 			var currentPageID = "#tm-home";
+			var currentCommandList = "#tm-commands-categories";
 			
 			// Setup SidebarNav
 			function setupSidebarNav() {
@@ -254,13 +254,22 @@
 				$.backstretch("img/" + bgImg);		    	
 			}
 
+			function changeCommandList(currentCommandList) {
+				$(".tm-commands-list a").click(function() {
+					
+					$(currentPageID).hide();
+				})
+			}
+
 			// Setup SidebarNav Toggle Button
 			function setupSidebarNavToggle() {
 				$("#tmSidebarNavToggle").on("click", function(){
 					$(".sidebar").toggleClass("show");
 				});
 			}
-			
+			<a href="#tag" id="tmCategoryTag" class="commands-list" data-bg-img="background.jpg" data-page="#tm-commands-tag">
+												<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Tag</h5>
+										</a>
 			// If there is enough room, stick the footer at the bottom of page content.
 			// If not, place it after the page content
 			function setupFooter() {
