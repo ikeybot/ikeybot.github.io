@@ -89,6 +89,7 @@
 					<section id="tm-commands" class="tm-section">
 						
 						<script>
+						function setupCommandList() {
 							$("#tmCategories a").click(function() {
 								var cat = $(this).attr('id');
 								$("#tmCategories").load("./pages/" + cat + ".html #content", function() {
@@ -96,6 +97,7 @@
 									// $.backstretch("./img/background.jpg");
 								});
 							});
+						}
 						</script>
 
 						<div id="tmCategories" class="ml-auto">
