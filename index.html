@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
 		<link rel="stylesheet" href="./css/fontawesome-all.min.css">
 		<link rel="stylesheet" href="./css/bootstrap.min.css">
-		<link rel="stylesheet" type="./text/css" href="css/magnific-popup.css"/>
+		<link rel="stylesheet" type="./text/css" href="css/magnific-popup.css">
 		<link rel="stylesheet" href="./css/style.css">
 
 		<script>
@@ -79,11 +79,11 @@
 							<header class="mb-4"><h1 class="tm-text-shadow"><b>Ikey Bot</b></h1></header>
 							<h3 class="tm-text-shadow">General purpose & user interaction bot</h3>
 							<p class="mb-5 tm-font-big">Suggestions for commands can be put in the support server. Commands can be found here, along with other links. Feel free to contact me with any questions, or issues.</p>
-							<a href="https://discord.com/api/oauth2/authorize?client_id=607091388588359687&permissions=8&scope=bot" target="popup" onclick="window.open('https://discord.com/api/oauth2/authorize?client_id=607091388588359687&permissions=8&scope=bot','name','width=1280,height=720')" class="btn tm-btn tm-font-big">
-								<i class="fas fa-envelope"></i>
+							<a href="https://discord.com/api/oauth2/authorize?client_id=607091388588359687&permissions=8&scope=bot"  target="_blank" class="btn tm-btn tm-font-big">
+								<i class="fab fa-discord"></i>
 								<span>Invite Bot</span>
 							</a> 
-							<a href="https://discord.gg/GQh6XEk" target="popup" onclick="window.open('https://discord.com/api/oauth2/authorize?client_id=607091388588359687&permissions=8&scope=bot','name','width=1280,height=720')"  class="btn tm-btn tm-font-big">
+							<a href="https://discord.gg/GQh6XEk" target="_blank" class="btn tm-btn tm-font-big">
 								<i class="fab fa-discord"></i>
 								<span>Join Support Server</span>
 							</a> 
@@ -102,25 +102,25 @@
 									<a href="#action" id="action" class="commands-list" data-page="#tm-action">
 											<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Action</h5>
 									</a>
-									<a href="./pages/admin.html" id="tmCategoryAdmin" class="commands-list">
+									<a href="#admin" id="tmCategoryAdmin" class="commands-list" data-page="#tm-admin">
 											<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Admin</h5>
 									</a>
-									<a href="./pages/general.html" id="tmCategoryGeneral" class="commands-list">
+									<a href="#general" id="tmCategoryGeneral" class="commands-list" data-page="#tm-general">
 											<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>General</h5>
 									</a>
-									<a href="./pages/guild.html" id="tmCategoryGuild" class="commands-list">
+									<a href="#guild" id="tmCategoryGuild" class="commands-list" data-page="#tm-guild">
 											<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Guild</h5>
 									</a>
-									<a href="./pages/image.html" id="tmCategoryImage" class="commands-list">
+									<a href="#image" id="tmCategoryImage" class="commands-list" data-page="#tm-image">
 											<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Image</h5>
 									</a>
-									<a href="./pages/info.html" id="tmCategoryInfo" class="commands-list">
+									<a href="#info" id="tmCategoryInfo" class="commands-list" data-page="#tm-info">
 											<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Info</h5>
 									</a>
-									<a href="./pages/nsfw.html" id="tmCategoryNsfw" class="commands-list">
+									<a href="#nsfw" id="tmCategoryNsfw" class="commands-list" data-page="#tm-nsfw">
 											<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>NSFW</h5>
 									</a>
-									<a href="./pages/tag.html" id="tmCategoryTag" class="commands-list">
+									<a href="#tag" id="tmCategoryTag" class="commands-list" data-page="#tm-tag">
 											<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Tag</h5>
 									</a>
 								</ul>
@@ -129,14 +129,14 @@
 					</section>
 
 
-					<!-- section 3 -->
+					<!-- section 3 support -->
 					<section id="tm-support" class="tm-section">						
 						<div class="row mb-4">
 							<header class="col-xl-12"><h2 class="tm-text-shadow">Support / Info</h2></header>		
 						</div>
 						<div class="row">
 							<div class="col-sm-12 col-md-6 col-lg-12 col-xl-6 mb-4">
-								<a href="https://discord.com/api/oauth2/authorize?client_id=607091388588359687&permissions=8&scope=bot" onclick="window.open('https://discord.com/api/oauth2/authorize?client_id=607091388588359687&permissions=8&scope=bot','name','width=1280,height=720')">
+								<a href="https://discord.com/api/oauth2/authorize?client_id=607091388588359687&permissions=8&scope=bot" target="_blank">
 									<div id="tm-help-invite" class="media tm-bg-transparent-black tm-border-white">
 										<i class="fab fa-discord mr-4 tm-icon-circled tm-icon-media"></i>
 										<div class="media-body">
@@ -146,7 +146,7 @@
 								</a>
 							</div>	
 							<div class="col-sm-12 col-md-6 col-lg-12 col-xl-6 mb-4">
-								<a href="https://discord.gg/GQh6XEk" onclick="window.open('https://discord.com/api/oauth2/authorize?client_id=607091388588359687&permissions=8&scope=bot','name','width=1280,height=720')">
+								<a href="https://discord.gg/GQh6XEk" target="_blank">
 									<div id="tm-help-server" class="media tm-bg-transparent-black tm-border-white">
 										<i class="fab fa-discord mr-4 tm-icon-circled tm-icon-media"></i>	
 										<div class="media-body">
@@ -180,20 +180,299 @@
 						</div>
 					</section>
 
+
 					<!-- section 4 action commands -->
 					<section id="tm-action" class="tm-section">
 						<div class="ml-auto">
 						<header class="mb-4"><h2 class="tm-text-shadow">Action Commands</h2></header>
-						<section class="tm-default-prefix"><h5>Default Prefix: $ -- All commands are lowercase.</h5></section>
-							<nav id="tmActionCommands" class="tm-commands-nav">
+							<nav id="tmActionCommands" class="tm-command-list">
 								<ul>
 									<h5 class="tm-command-name">Choke</h5>
 									<p class="tm-command-desc">Mention a user to choke them.</p>
 									<p class="tm-command-usage">$choke @user</p>
+									<br>
+									<h5 class="tm-command-name">Dodge</h5>
+									<p class="tm-command-desc">Dodge an attack (50/50 chance).</p>
+									<p class="tm-command-usage">$dodge</p>
+									<br>
+									<h5 class="tm-command-name">Hold Hands</h5>
+									<p class="tm-command-desc">Mention a user to ask them to hold hands.</p>
+									<p class="tm-command-usage">$handhold/$hh @user</p>
+									<br>
+									<h5 class="tm-command-name">High Five</h5>
+									<p class="tm-command-desc">Mention a user to high five them.</p>
+									<p class="tm-command-usage">$highfive/$hf @user</p>
+									<br>
+									<h5 class="tm-command-name">Hug</h5>
+									<p class="tm-command-desc">Mention a user to hug them.</p>
+									<p class="tm-command-usage">$hug @user</p>
+									<br>
+									<h5 class="tm-command-name">Kill</h5>
+									<p class="tm-command-desc">Mention a user to "kill" them (33% chance for choke/shoot/stab)</p>
+									<p class="tm-command-usage">$kill/$attack @user</p>
+									<br>
+									<h5 class="tm-command-name">Kiss</h5>
+									<p class="tm-command-desc">Mention a user to kiss them.</p>
+									<p class="tm-command-usage">$kiss @user</p>
+									<br>
+									<h5 class="tm-command-name">Pat</h5>
+									<p class="tm-command-desc">Mention a user to pat them.</p>
+									<p class="tm-command-usage">$pat/$pet @user</p>
+									<br>
+									<h5 class="tm-command-name">Punch</h5>
+									<p class="tm-command-desc">Mention a user to shoot them.</p>
+									<p class="tm-command-usage">$punch @user</p>
+									<br>
+									<h5 class="tm-command-name">Shoot</h5>
+									<p class="tm-command-desc">Mention a user to shoot them.</p>
+									<p class="tm-command-usage">$shoot @user</p>
+									<br>
+									<h5 class="tm-command-name">Slap</h5>
+									<p class="tm-command-desc">Mention a user to slap them.</p>
+									<p class="tm-command-usage">$slap @user</p>
+									<br>
+									<h5 class="tm-command-name">Spank</h5>
+									<p class="tm-command-desc">Mention a user to spank them.</p>
+									<p class="tm-command-usage">$spank< @user/p>
+									<br>
+									<h5 class="tm-command-name">Stab</h5>
+									<p class="tm-command-desc">Mention a user to stab them.</p>
+									<p class="tm-command-usage">$stab @user</p>
+									<br>
 								</ul>
 							</nav>
-						</div>       		          	
+						</div>
 					</section>
+
+					<!-- section 5 admin commands -->
+					<section id="tm-admin" class="tm-section">
+						<div class="ml-auto">
+						<header class="mb-4"><h2 class="tm-text-shadow">Admin Commands</h2></header>
+							<nav id="tmAdminCommands" class="tm-command-list">
+								<ul>
+									<h5 class="tm-command-name">Ban</h5>
+									<p class="tm-command-desc">Bans a user (requires Ban Members permission).</p>
+									<p class="tm-command-usage">$ban @user optional reason</p>
+									<p class="tm-command-usage">$ban list</p>
+									<br>
+									<h5 class="tm-command-name">Delete Role</h5>
+									<p class="tm-command-desc">Deletes a server role (requires Manage Roles permission).</p>
+									<p class="tm-command-usage">$deleterole/$dr/$delrole/$drole role name</p>
+									<br>
+									<h5 class="tm-command-name">Kick</h5>
+									<p class="tm-command-desc">Kicks a user (requires Kick Members permission).</p>
+									<p class="tm-command-usage">$kick @user optional reason</p>
+									<br>
+									<h5 class="tm-command-name">Mute</h5>
+									<p class="tm-command-desc">Mutes a user (requires Mute Members permission).</p>
+									<p class="tm-command-usage">$mute/$stfu @user 1h/30m/60s optional reason</p>
+									<p class="tm-command-usage">$mute list</p>
+									<br>
+									<h5 class="tm-command-name">Prefix</h5>
+									<p class="tm-command-desc">Change the prefix for the server (requires Manage Server permission).</p>
+									<p class="tm-command-usage">$prefix new prefix<p>
+									<p class="tm-command-usage">$prefixreset (in case of issues)</p>
+									<br>
+									<h5 class="tm-command-name">Purge</h5>
+									<p class="tm-command-desc">Bulk delete up to 1000 messages (requires Manage Messages permission).</p>
+									<p class="tm-command-usage">$purge / $p / $delete 1-1000</p>
+									<br>
+									<h5 class="tm-command-name">Role</h5>
+									<p class="tm-command-desc">Adds or removes a role from a user</p>
+									<p class="tm-command-usage">$role @user role name</p>
+									<br>
+									<h5 class="tm-command-name">Unban</h5>
+									<p class="tm-command-desc">Unbans a user (requires Ban Members permission).</p>
+									<p class="tm-command-usage">$unban userID/username</p>
+									<br>
+									<h5 class="tm-command-name">Unmute</h5>
+									<p class="tm-command-desc">Unmutes a user (requires Mute Members permission).</p>
+									<p class="tm-command-usage">$unmute @user</p>
+									<br>
+									<h5 class="tm-command-name">Toggle</h5>
+									<p class="tm-command-desc">Disables/enables the bot in the current channel (requires Admin permission).</p>
+									<p class="tm-command-usage">$toggle/$enable/$disable</p>
+									<br>
+								</ul>
+							</nav>
+						</div>
+					</section>
+
+					<!-- section 6 general commands -->
+					<section id="tm-general" class="tm-section">
+						<div class="ml-auto">
+						<header class="mb-4"><h2 class="tm-text-shadow">General Commands</h2></header>
+							<nav id="tmGeneralCommands" class="tm-command-list">
+								<ul>
+									<h5 class="tm-command-name">Enlarge</h5>
+									<p class="tm-command-desc">Enlarges an emoji (work in progress).</p>
+									<p class="tm-command-usage">$enlarge/$e :emoji:</p>
+									<br>
+									<h5 class="tm-command-name">Ping</h5>
+									<p class="tm-command-desc">Ping.</p>
+									<p class="tm-command-usage">$ping</p>
+									<br>
+									<h5 class="tm-command-name">String</h5>
+									<p class="tm-command-desc">Formats a string same as tag system, for testing.</p>
+									<p class="tm-command-usage">$string/$str string content</p>
+									<br>
+								</ul>
+							</nav>
+						</div>
+					</section>
+
+					<!-- section 7 guild commands -->
+					<section id="tm-guild" class="tm-section">
+						<div class="ml-auto">
+						<header class="mb-4"><h2 class="tm-text-shadow">Guild Commands</h2></header>
+							<nav id="tmGuildCommands" class="tm-command-list">
+								<ul>
+									<h5 class="tm-command-name">Emojis</h5>
+									<p class="tm-command-desc">Displays all the server emojis.</p>
+									<p class="tm-command-usage">$emojis</p>
+									<br>
+									<h5 class="tm-command-name">Icon</h5>
+									<p class="tm-command-desc">Displays the server icon.</p>
+									<p class="tm-command-usage">$icon/$ic</p>
+									<br>
+									<h5 class="tm-command-name">Roles</h5>
+									<p class="tm-command-desc">Displays all the server roles.</p>
+									<p class="tm-command-usage">$roles</p>
+									<br>
+									<h5 class="tm-command-name">Server</h5>
+									<p class="tm-command-desc">Displays server information.</p>
+									<p class="tm-command-usage">$server/$guild</p>
+									<br>
+									<h5 class="tm-command-name">Set Bot Nickname</h5>
+									<p class="tm-command-desc">Change the bot server nickname (requires Manage Nicknames permission).</p>
+									<p class="tm-command-usage">$setbotnickname/$setbotnick/$setnick/$nickname new bot nickname</p>
+									<br>
+								</ul>
+							</nav>
+						</div>
+					</section>
+
+					<!-- section 8 image commands -->
+					<section id="tm-image" class="tm-section">
+						<div class="ml-auto">
+						<header class="mb-4"><h2 class="tm-text-shadow">Image Commands</h2></header>
+							<nav id="tmImageCommands" class="tm-command-list">
+								<ul>
+									<h5 class="tm-command-name">Crazimo</h5>
+									<p class="tm-command-desc">Crazimo.</p>
+									<p class="tm-command-usage">$crazimo</p>
+									<br>
+									<h5 class="tm-command-name">Waifu</h5>
+									<p class="tm-command-desc">Random cute wiafu.</p>
+									<p class="tm-command-usage">$waifu</p>
+									<br>
+								</ul>
+							</nav>
+						</div>
+					</section>
+
+					<!-- section 9 info commands -->
+					<section id="tm-info" class="tm-section">
+						<div class="ml-auto">
+						<header class="mb-4"><h2 class="tm-text-shadow">Info Commands</h2></header>
+							<nav id="tmInfoCommands" class="tm-command-list">
+								<ul>
+									<h5 class="tm-command-name">Avatar</h5>
+									<p class="tm-command-desc">Displays a users (or your own) avatar.</p>
+									<p class="tm-command-usage">$avatar/$pfp/$dp/$av @user optional</p>
+									<br>
+									<h5 class="tm-command-name">Commands</h5>
+									<p class="tm-command-desc">Lists all available commands.</p>
+									<p class="tm-command-usage">$commands</p>
+									<br>
+									<h5 class="tm-command-name">Help</h5>
+									<p class="tm-command-desc">Sends DM with help, or see further command details</p>
+									<p class="tm-command-usage">$help</p>
+									<p class="tm-command-usage">$help command</p>
+									<br>
+									<h5 class="tm-command-name">Info</h5>
+									<p class="tm-command-desc">Displays detailed bot info.</p>
+									<p class="tm-command-usage">$info/$bot</p>
+									<br>
+									<h5 class="tm-command-name">Invite</h5>
+									<p class="tm-command-desc">Sends bot invite DM.</p>
+									<p class="tm-command-usage">$invite/$inv</p>
+									<br>
+									<h5 class="tm-command-name">Profile</h5>
+									<p class="tm-command-desc">Displays detailed user information.</p>
+									<p class="tm-command-usage">$profile/$prof/$pr @user optional</p>
+									<br>
+								</ul>
+							</nav>
+						</div>
+					</section>
+
+					<!-- section 10 nsfw commands -->
+					<section id="tm-nsfw" class="tm-section">
+						<div class="ml-auto">
+						<header class="mb-4"><h2 class="tm-text-shadow">NSFW Commands</h2></header>
+							<nav id="tmNSFWCommands" class="tm-command-list">
+								<ul>
+									<h5 class="tm-command-name">Cutie</h5>
+									<p class="tm-command-desc">Sends some random cutie hentai.</p>
+									<p class="tm-command-usage">$cutie</p>
+									<br>
+									<h5 class="tm-command-name">Feet</h5>
+									<p class="tm-command-desc">Sends some random feet hentai.</p>
+									<p class="tm-command-usage">$feet</p>
+									<br>
+									<h5 class="tm-command-name">Fuck</h5>
+									<p class="tm-command-desc">Mention a user to ask them to fuck.</p>
+									<p class="tm-command-usage">$fuck/$sex</p>
+									<br>
+									<h5 class="tm-command-name">Tights</h5>
+									<p class="tm-command-desc">Sends some random tights hentai.</p>
+									<p class="tm-command-usage">$tights</p>
+									<br>
+								</ul>
+							</nav>
+						</div>
+					</section>
+
+					<!-- section 11 tag commands -->
+					<section id="tm-tag" class="tm-section">
+						<div class="ml-auto">
+						<header class="mb-4"><h2 class="tm-text-shadow">Tag Commands</h2></header>
+							<nav id="tmTagCommands" class="tm-command-list">
+								<ul>
+									<h5 class="tm-command-name">Create Tag</h5>
+									<p class="tm-command-desc">Create a tag up to 1950 characters with 8MB img. Unique tags are global, otherwise server tags are made.</p>
+									<p class="tm-command-usage">$createtag/$ctag/$ct tagname tag content goes here (+ attch)</p>
+									<br>
+									<h5 class="tm-command-name">Delete Tag</h5>
+									<p class="tm-command-desc">Delete a server tag (requires Admin permission or tag owner) or global tag (requires tag owner).</p>
+									<p class="tm-command-usage">$deletetag/$dtag/$dt tagname</p>
+									<br>
+									<h5 class="tm-command-name">Edit Tag</h5>
+									<p class="tm-command-desc">Edit an existing tag (requires tag owner).</p>
+									<p class="tm-command-usage">$edittag/$etag/$et tagname new tag content goes here (+ new attch)</p>
+									<br>
+									<h5 class="tm-command-name">Gift Tag</h5>
+									<p class="tm-command-desc">Gift a tag to a user (requires tag owner).</p>
+									<p class="tm-command-usage">$gifttag/$gtag/$gt @user tagname</p>
+									<br>
+									<h5 class="tm-command-name">Random Tag</h5>
+									<p class="tm-command-desc">Displays a random tag, either server or global</p>
+									<p class="tm-command-usage">$randomtag/$rtag/$rt</p>
+									<br>
+									<h5 class="tm-command-name">Search Tag</h5>
+									<p class="tm-command-desc">Search for a tag,</p>
+									<p class="tm-command-usage">$searchtag/$listtag/$st/$lt tagname/@user/server</p>
+									<br>
+									<h5 class="tm-command-name">View Tag</h5>
+									<p class="tm-command-desc">Display a tag, server if available, otherwise global tag.</p>
+									<p class="tm-command-usage">$viewtag/$vtag/$vt/$t</p>
+									<br>
+								</ul>
+							</nav>
+						</div>
+					</section>
+
 
 				</div>	<!-- .tm-content -->							
 

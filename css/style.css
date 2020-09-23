@@ -118,6 +118,8 @@ p:last-child { margin-bottom: 0; }
 
 
 .sidebar {
+    position: fixed;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -138,14 +140,13 @@ p:last-child { margin-bottom: 0; }
 .tm-content {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
     -ms-flex-item-align: stretch;
         align-self: stretch;
     -webkit-box-align: center;
     -ms-flex-align: center;
             align-items: center;
     padding: 50px 10%;
-    width: 100%;
+    margin-left: 20%;
     position: relative;
 }
 
@@ -167,7 +168,10 @@ p:last-child { margin-bottom: 0; }
     margin-right: 35px;
 }
 
-.tm-sidebar-nav { font-size: 1.6rem; }
+.tm-sidebar-nav {
+    font-size: 1.6rem;
+}
+
 .tm-sidebar-nav li { list-style: none; }
 .tm-sidebar-nav a {
     background-image: url(../img/nav-item.png);
@@ -237,17 +241,26 @@ p:last-child { margin-bottom: 0; }
     padding-bottom: 10px;
 }
 
+.tm-command-list {
+    padding-top: 20px;
+}
+
 .tm-command-desc {
     font-size: 1rem;
-    line-height: 2.2;
+    line-height: 0.7;
 }
 
 .tm-command-usage {
     color: #d4d4d4;
     font-style: italic;
     font-size: 1rem;
-    line-height: 2.2;
+    line-height: 0.7;
+}
 
+.tm-command-name {
+    font-size: 1.25rem;
+    line-height: 0.7;
+    padding-bottom: 10px;
 }
 
 .tm-section {
@@ -304,7 +317,7 @@ address { font-size: 1rem; }
 }
 
 .footer-link {
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     right: 20px;
     margin-left: 20px;

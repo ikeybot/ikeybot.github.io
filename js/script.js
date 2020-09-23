@@ -42,7 +42,7 @@ function setupCommandLists() {
     // Add Event Listener to each Nav item
     $(".tm-commands-nav a").click(function(){
         
-        var currentCommandsNavItem = $(this); 
+        var currentCommandsNavItem = $(this);
         loadCommandList(currentCommandsNavItem);
 
         setupFooter();
