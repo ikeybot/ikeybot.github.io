@@ -99,44 +99,8 @@
 		
 		<script>
 
-			var sidebarVisible = false;
-			var currentPageID = "#tm-action";
-			
-			// Setup SidebarNav
-			function setupSidebarNav() {
-				// Add Event Listener to each Nav item
-				$(".tm-sidebar-nav a").click(function(e){
-					e.preventDefault();
-
-					var currentNavItem = $(this);
-					changePage(currentNavItem);
-
-					setupFooter();
-
-					// Hide the nav on mobile
-					$("#tmSidebar").removeClass("show");
-				});	    
-			}
-			
-			function changePage(currentNavItem) {
-				// Update Nav1 items
-				$(".tm-sidebar-nav a").removeClass("active");
-				currentNavItem.addClass("active");
-				
-				$(currentPageID).hide();
-
-				// Show current page
-				currentPageID = currentNavItem.data("page");
-				$(currentPageID).fadeIn(1000);
-
-				// Change background image
-				var bgImg = currentNavItem.data("bgImg");
-				$.backstretch("img/" + bgImg);		    	
-			}
-
 			// Setup SidebarNav Toggle Button
 			function setupSidebarNavToggle() {
-
 				$("#tmSidebarNavToggle").on("click", function(){
 					$(".sidebar").toggleClass("show");
 				});
@@ -194,10 +158,7 @@
 
 					$("#tm-home").fadeIn();
 
-					// Set up background first page
-					var bgImg = $("#tmSidebarHome").data("bgImg");
-
-					$.backstretch("img/" + bgImg, {fade: 500});
+					$.backstretch("./img/background.jpg", {fade: 500});
 
 					// Setup Carousel, Nav, and Nav Toggle
 					setupSidebarNav();
