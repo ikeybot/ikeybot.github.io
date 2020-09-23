@@ -21,9 +21,12 @@
 				renderPage = false;
 			}
 		</script>
+
 	</head>
 
+
 	<body>
+
 		<!-- Loader -->
 		<div id="loader-wrapper">
 			<div id="loader"></div>
@@ -31,10 +34,12 @@
 			<div class="loader-section section-right"></div>
 		</div>
 		
+
 		<!-- Page Content -->
 		<div class="container-fluid tm-main">
 			<div class="row tm-main-row">
 				
+
 				<!-- Sidebar -->
 				<div id="tmSideBar" class="col-xl-3 col-lg-4 col-md-12 col-sm-12 sidebar">
 					<button id="tmSidebarNavToggle" class="menu-icon">&#9776;</button>
@@ -42,19 +47,19 @@
 						<nav id="tmSidebarNav" class="tm-sidebar-nav">
 							<ul>
 								<li>
-									<a href="#home" id="tmSidebarHome" class="scrolly active" data-bg-img="background.jpg" data-page="#tm-home">
+									<a href="#home" id="tmSidebarHome" class="scrolly active" data-page="#tm-home">
 										<i class="fas fa-home tm-nav-fa-icon"></i>
 										<span>Home</span>
 									</a>
 								</li>
 								<li>
-									<a href="#commands" id="tmSidebarCommands" class="scrolly" data-bg-img="background.jpg" data-page="#tm-commands">
+									<a href="#commands" id="tmSidebarCommands" class="scrolly" data-page="#tm-commands">
 										<i class="fas fa-list-ul tm-nav-fa-icon"></i>
 										<span>Commands</span>
 									</a>
 								</li>							
 								<li>
-									<a href="#support" id="tmSidebarSupport" class="scrolly" data-bg-img="background.jpg" data-page="#tm-support">
+									<a href="#support" id="tmSidebarSupport" class="scrolly" data-page="#tm-support">
 										<i class="fas fa-info tm-nav-fa-icon"></i>
 										<span>Support / Info</span>
 									</a>
@@ -64,8 +69,9 @@
 					</div>
 				</div>
 				
-					
+
 				<div class="col-xl-9 col-lg-8 col-md-12 col-sm-12 tm-content">
+
 
 					<!-- section 1 home -->
 					<section id="tm-home" class="tm-section">
@@ -85,14 +91,15 @@
 						</div>
 					</section>
 
+
 					<!-- section 2 commands -->
 					<section id="tm-commands" class="tm-section">
-						<div id="tmCategories" class="ml-auto">
+						<div id="tmDynamicCommands" class="ml-auto">
 						<header class="mb-4"><h2 class="tm-text-shadow">Commands</h2></header>
 						<section class="tm-default-prefix"><h5>Default Prefix: $ -- All commands are lowercase.</h5></section>
-							<div class="tm-command-categories" data-bg-img="background.jpg" data-page="#tm-commands-categories">
+							<nav id="tmCommandsNav" class="tm-commands-nav">
 								<ul>
-									<a href="./pages/action.html" id="tmCategoryAction" class="commands-list">
+									<a href="#action" id="action" class="commands-list" data-page="#tm-action">
 											<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Action</h5>
 									</a>
 									<a href="./pages/admin.html" id="tmCategoryAdmin" class="commands-list">
@@ -120,6 +127,7 @@
 							</div>
 						</div>       		          	
 					</section>
+
 
 					<!-- section 3 -->
 					<section id="tm-support" class="tm-section">						
@@ -172,8 +180,8 @@
 						</div>
 					</section>
 
-					<!-- section 4 action commands -->
-					<section id="tm-commands-action" class="tm-section">
+					<!-- action commands -->
+					<section id="tm-action" class="tm-section" data-bg-img="background.jpg" data-page="tm-action">
 						<div class="ml-auto">
 						<header class="mb-4"><h2 class="tm-text-shadow">Action Commands</h2></header>
 							<div class="tm-commands-list">
@@ -187,7 +195,7 @@
 							</div>
 						</div>
 					</section>
-								
+
 
 				</div>	<!-- .tm-content -->							
 
@@ -198,6 +206,7 @@
 					</a>
 					<p class="tm-copyright-text"><i class="far fa-copyright"></i>Copyright ikey. 2020</p>
 				</footer>
+
 
 			</div>	<!-- row -->			
 		</div>
@@ -213,7 +222,7 @@
 		<script type="text/javascript" src="./js/jquery.magnific-popup.min.js"></script>
 		<script type="text/javascript" src="./js/jquery.backstretch.min.js"></script>
 		
-		
+
 		<script>
 
 			var sidebarVisible = false;
@@ -255,6 +264,33 @@
 				$("#tmSidebarNavToggle").on("click", function(){
 					$(".sidebar").toggleClass("show");
 				});
+			}
+
+			// Setup SidebarNav
+			function setupCommandLists() {
+				// Add Event Listener to each Nav item
+				$(".tm-commands-nav a").click(function(e){
+					e.preventDefault();
+
+					var currentCommandsNavItem = $(this);
+					loadCommandList(currentCommandsNavItem);
+					console.log(JSON.stringify(currentCommandsNavItem));
+
+					setupFooter();
+
+					// Hide the nav on mobile
+					$("#tmSidebar").removeClass("show");
+				});	    
+			}
+
+			function loadCommandList() {
+
+				var category = currentCommandsNavItem.id;
+
+				$(currentPageID).hide();
+				
+				$("#tmDynamicCommands").load("./" + category + ".html")
+
 			}
 
 			// If there is enough room, stick the footer at the bottom of page content.
@@ -299,9 +335,10 @@
 					// Set up background first page
 					var bgImg = $("#tmSidebarHome").data("bgImg");
 
-					$.backstretch("img/" + bgImg, {fade: 500});
+					$.backstretch("./img/background.jpg", {fade: 500});
 
 					// Setup Nav, Nav Toggle and Footer
+					setupCommandLists();
 					setupSidebarNav();
 					setupSidebarNavToggle();
 					setupFooter();
