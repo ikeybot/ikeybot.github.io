@@ -87,12 +87,23 @@
 
 					<!-- section 2 commands -->
 					<section id="tm-commands" class="tm-section">
-						<div class="ml-auto">
+						
+						<script>
+							$("#tmCategories a").click(function() {
+								var cat = $(this).attr('id');
+								$("#tmCategories").load("./pages/" + cat + ".html #content", function() {
+									$("#tmCategories").fadeIn(1000);
+									// $.backstretch("./img/background.jpg");
+								});
+							});
+						</script>
+
+						<div id="tmCategories" class="ml-auto">
 						<header class="mb-4"><h2 class="tm-text-shadow">Commands</h2></header>
 						<section class="tm-default-prefix"><h5>Default Prefix: $ -- All commands are lowercase.</h5></section>
 							<div class="tm-command-categories" data-bg-img="background.jpg" data-page="#tm-commands-categories">
 								<ul>
-									<a href="./pages/action.html" id="tmCategoryAction" class="commands-list">
+									<a href="#action" id="action" class="commands-list">
 											<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Action</h5>
 									</a>
 									<a href="./pages/admin.html" id="tmCategoryAdmin" class="commands-list">
@@ -247,15 +258,7 @@
 				$(currentPageID).fadeIn(1000);
 
 				// Change background image
-				var bgImg = currentSidebarNavItem.data("bgImg");
-				$.backstretch("img/" + bgImg);		    	
-			}
-
-			function changeCommandList(currentCommandList) {
-				$(".tm-commands-list a").click(function() {
-					
-					$(currentPageID).hide();
-				})
+				$.backstretch("./img/background.jpg");		    	
 			}
 
 			// Setup SidebarNav Toggle Button
