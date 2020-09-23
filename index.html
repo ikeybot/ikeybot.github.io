@@ -70,7 +70,7 @@
 				</div>
 				
 
-				<div class="col-xl-9 col-lg-8 col-md-12 col-sm-12 tm-content">
+				<div id="content" class="col-xl-9 col-lg-8 col-md-12 col-sm-12 tm-content">
 
 
 					<!-- section 1 home -->
@@ -181,7 +181,7 @@
 					</section>
 
 					<!-- action commands -->
-					<section id="tm-action" class="tm-section" data-bg-img="background.jpg" data-page="tm-action">
+					<section id="tm-action" class="tm-section" data-page="tm-action">
 						<div class="ml-auto">
 						<header class="mb-4"><h2 class="tm-text-shadow">Action Commands</h2></header>
 							<div class="tm-commands-list">
@@ -289,7 +289,7 @@
 
 				$(currentPageID).hide();
 				
-				$("#tmDynamicCommands").load("./" + category + ".html")
+				$("#content").load("./" + category + ".html")
 
 			}
 
