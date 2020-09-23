@@ -269,17 +269,18 @@
 			// Setup SidebarNav
 			function setupCommandLists() {
 				// Add Event Listener to each Nav item
-				$(".tm-commands-nav a").click(function(e){
-					e.preventDefault();
+				$(".tm-commands-nav a").click(function(){
+					alert("Clicked!");
+					// e.preventDefault();
 
-					var currentCommandsNavItem = $(this);
-					loadCommandList(currentCommandsNavItem);
-					console.log(JSON.stringify(currentCommandsNavItem));
+					// var currentCommandsNavItem = $(this);
+					// loadCommandList(currentCommandsNavItem);
+					// console.log(JSON.stringify(currentCommandsNavItem));
 
-					setupFooter();
+					// setupFooter();
 
-					// Hide the nav on mobile
-					$("#tmSidebar").removeClass("show");
+					// // Hide the nav on mobile
+					// $("#tmSidebar").removeClass("show");
 				});	    
 			}
 
