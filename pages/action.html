@@ -43,13 +43,13 @@
 						<nav id="tmSidebarNav" class="tm-sidebar-nav">
 							<ul>
 								<li>
-									<a href="#home" id="tmSidebarHome" class="scrolly active" data-bg-img="background.jpg" data-page="#tm-home">
+									<a href="#home" id="tmSidebarHome" class="scrolly" data-bg-img="background.jpg" data-page="#tm-home">
 										<i class="fas fa-home tm-nav-fa-icon"></i>
 										<span>Home</span>
 									</a>
 								</li>
 								<li>
-									<a href="#commands" id="tmSidebarCommands" class="scrolly" data-bg-img="background.jpg" data-page="#tm-commands">
+									<a href="#commands" id="tmSidebarCommands" class="scrolly active" data-bg-img="background.jpg" data-page="#tm-commands">
 										<i class="fas fa-list-ul tm-nav-fa-icon"></i>
 										<span>Commands</span>
 									</a>
@@ -102,8 +102,8 @@
 			var sidebarVisible = false;
 			var currentPageID = "#tm-action-commands";
 			
-			// Setup Nav1
-			function setupNav1() {
+			// Setup SidebarNav
+			function setupSidebarNav() {
 				// Add Event Listener to each Nav item
 				$(".tm-sidebar-nav a").click(function(e){
 					e.preventDefault();
@@ -134,8 +134,8 @@
 				$.backstretch("img/" + bgImg);		    	
 			}
 
-			// Setup Nav1 Toggle Button
-			function setupNavToggle1() {
+			// Setup SidebarNav Toggle Button
+			function setupSidebarNavToggle() {
 
 				$("#tmSidebarNavToggle").on("click", function(){
 					$(".sidebar").toggleClass("show");
@@ -200,8 +200,8 @@
 					$.backstretch("img/" + bgImg, {fade: 500});
 
 					// Setup Carousel, Nav, and Nav Toggle
-					setupNav1();
-					setupNavToggle1();
+					setupSidebarNav();
+					setupSidebarNavToggle();
 					setupFooter();
 
 					// Resize Footer upon window resize
