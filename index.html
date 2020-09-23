@@ -124,7 +124,7 @@
 											<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Tag</h5>
 									</a>
 								</ul>
-							</div>
+							</nav>
 						</div>       		          	
 					</section>
 
@@ -180,22 +180,20 @@
 						</div>
 					</section>
 
-					<!-- action commands -->
-					<section id="tm-action" class="tm-section" data-page="tm-action">
+					<!-- section 4 action commands -->
+					<section id="tm-action" class="tm-section">
 						<div class="ml-auto">
 						<header class="mb-4"><h2 class="tm-text-shadow">Action Commands</h2></header>
-							<div class="tm-commands-list">
+						<section class="tm-default-prefix"><h5>Default Prefix: $ -- All commands are lowercase.</h5></section>
+							<nav id="tmActionCommands" class="tm-commands-nav">
 								<ul>
-									<article>
-										<h5 class="tm-command-name">Choke</h5>
-										<p class="tm-command-desc">Mention a user to choke them.</p>
-										<p class="tm-command-usage">$choke @user</p>
-									</article>
+									<h5 class="tm-command-name">Choke</h5>
+									<p class="tm-command-desc">Mention a user to choke them.</p>
+									<p class="tm-command-usage">$choke @user</p>
 								</ul>
-							</div>
-						</div>
+							</nav>
+						</div>       		          	
 					</section>
-
 
 				</div>	<!-- .tm-content -->							
 
@@ -221,137 +219,8 @@
 		<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src="./js/jquery.magnific-popup.min.js"></script>
 		<script type="text/javascript" src="./js/jquery.backstretch.min.js"></script>
-		
+		<script type="text/javascript" src="./js/script.js"></script>
 
-		<script>
-
-			var sidebarVisible = false;
-			var currentPageID = "#tm-home";
-			
-			// Setup SidebarNav
-			function setupSidebarNav() {
-				// Add Event Listener to each Nav item
-				$(".tm-sidebar-nav a").click(function(e){
-					e.preventDefault();
-
-					var currentSidebarNavItem = $(this);
-					changePage(currentSidebarNavItem);
-
-					setupFooter();
-
-					// Hide the nav on mobile
-					$("#tmSidebar").removeClass("show");
-				});	    
-			}
-			
-			function changePage(currentSidebarNavItem) {
-				// Update SidebarNav items
-				$(".tm-sidebar-nav a").removeClass("active");
-				currentSidebarNavItem.addClass("active");
-				
-				$(currentPageID).hide();
-
-				// Show current page
-				currentPageID = currentSidebarNavItem.data("page");
-				$(currentPageID).fadeIn(1000);
-
-				// Change background image
-				$.backstretch("./img/background.jpg");		    	
-			}
-
-			// Setup SidebarNav Toggle Button
-			function setupSidebarNavToggle() {
-				$("#tmSidebarNavToggle").on("click", function(){
-					$(".sidebar").toggleClass("show");
-				});
-			}
-
-			// Setup SidebarNav
-			function setupCommandLists() {
-				// Add Event Listener to each Nav item
-				$(".tm-commands-nav a").click(function(){
-					alert("Clicked!");
-					// e.preventDefault();
-
-					// var currentCommandsNavItem = $(this);
-					// loadCommandList(currentCommandsNavItem);
-					// console.log(JSON.stringify(currentCommandsNavItem));
-
-					// setupFooter();
-
-					// // Hide the nav on mobile
-					// $("#tmSidebar").removeClass("show");
-				});	    
-			}
-
-			function loadCommandList() {
-
-				var category = currentCommandsNavItem.id;
-
-				$(currentPageID).hide();
-				
-				$("#content").load("./" + category + ".html #tm-" + category + "-commands")
-
-			}
-
-			// If there is enough room, stick the footer at the bottom of page content.
-			// If not, place it after the page content
-			function setupFooter() {
-
-				var padding = 100;
-				var footerPadding = 40;
-				var mainContent = $("section"+currentPageID);
-				var mainContentHeight = mainContent.outerHeight(true);
-				var footer = $(".footer-link");
-				var footerHeight = footer.outerHeight(true);
-				var totalPageHeight = mainContentHeight + footerHeight + footerPadding + padding;
-				var windowHeight = $(window).height();		
-
-				if(totalPageHeight > windowHeight){
-					$(".tm-content").css("margin-bottom", footerHeight + footerPadding + "px");
-					footer.css("bottom", footerHeight + "px");  			
-				}
-				else {
-					$(".tm-content").css("margin-bottom", "0");
-					footer.css("bottom", "20px");  				
-				}  			
-			}
-
-			// Everything is loaded including images.
-			$(window).on("load", function(){
-
-				// Render the page on modern browser only.
-				if(renderPage) {
-					// Remove loader
-					$('body').addClass('loaded');
-
-					// Page transition
-					var allPages = $(".tm-section");
-
-					// Hide all pages
-					allPages.hide();
-
-					$("#tm-home").fadeIn();
-
-					// Set up background first page
-					var bgImg = $("#tmSidebarHome").data("bgImg");
-
-					$.backstretch("./img/background.jpg", {fade: 500});
-
-					// Setup Nav, Nav Toggle and Footer
-					setupCommandLists();
-					setupSidebarNav();
-					setupSidebarNavToggle();
-					setupFooter();
-
-					// Resize Footer upon window resize
-					$(window).resize(function() {
-						setupFooter();
-					});
-				}	      	
-			});
-			
-		</script>
 
 	</body>
 </html>

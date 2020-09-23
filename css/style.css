@@ -114,7 +114,7 @@ p:last-child { margin-bottom: 0; }
     -o-transition: all .3s ease-in-out;
 }
 
-#tmSidebarNavToggle, #tmCommandsAction { display: none; }
+#tmSidebarNavToggle { display: none; }
 
 
 .sidebar {
@@ -243,6 +243,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 .tm-command-usage {
+    color: #d4d4d4;
     font-style: italic;
     font-size: 1rem;
     line-height: 2.2;
