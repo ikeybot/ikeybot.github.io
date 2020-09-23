@@ -114,9 +114,8 @@ p:last-child { margin-bottom: 0; }
     -o-transition: all .3s ease-in-out;
 }
 
-#tmSidebarNavToggle { display: none; }
+#tmSidebarNavToggle, #tmCommandsAction { display: none; }
 
-#tmCommandsNavToggle { display: none; }
 
 .sidebar {
     display: -webkit-box;
