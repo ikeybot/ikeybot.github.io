@@ -99,10 +99,13 @@
 						<section class="tm-default-prefix"><h5>Default Prefix: $ -- All commands are lowercase.</h5></section>
 							<nav id="tmCommandsNav" class="tm-commands-nav">
 								<ul>
-									<a href="#action" id="action" class="commands-list" data-page="#tm-action">
+									<a href="#action" id="tmCategoryaAction" class="commands-list" data-page="#tm-action">
 											<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Action</h5>
 									</a>
 									<a href="#admin" id="tmCategoryAdmin" class="commands-list" data-page="#tm-admin">
+											<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Admin</h5>
+									</a>
+									<a href="#family" id="tmCategoryFamily" class="commands-list" data-page="#tm-family">
 											<h5 class="tm-text-shadow"><i class="fas fa-ellipsis-h"></i>Admin</h5>
 									</a>
 									<a href="#general" id="tmCategoryGeneral" class="commands-list" data-page="#tm-general">
@@ -298,7 +301,39 @@
 						</div>
 					</section>
 
-					<!-- section 6 general commands -->
+					<!-- section 6 family commands -->
+					<section id="tm-family" class="tm-section">
+						<div class="ml-auto">
+						<header class="mb-4"><h2 class="tm-text-shadow">Family Commands</h2></header>
+							<nav id="tmFamilyCommands" class="tm-command-list">
+								<ul>
+									<h5 class="tm-command-name">Adopt</h5>
+									<p class="tm-command-desc">Adopts a user into your family (must be married)</p>
+									<p class="tm-command-usage">$adopt/$a @user</p>
+									<br>
+									<h5 class="tm-command-name">Disown</h5>
+									<p class="tm-command-desc">Disowns a child from your family, or disowns your parents</p>
+									<p class="tm-command-usage">$disown/$dw @user</p>
+									<p class="tm-command-usage">$runaway$disown/dw</p>
+									<br>
+									<h5 class="tm-command-name">Marry</h5>
+									<p class="tm-command-desc">Marry a user from the server, provided they're single</p>
+									<p class="tm-command-usage">$marry/$my @user</p>
+									<br>
+									<h5 class="tm-command-name">Family</h5>
+									<p class="tm-command-desc">Displays a users (or your own) family tree</p>
+									<p class="tm-command-usage">$family/$f @user optional</p>
+									<br>
+									<h5 class="tm-command-name">Divorce</h5>
+									<p class="tm-command-desc">Divorces your partner, provided your married</p>
+									<p class="tm-command-usage">$divorce/$dv</p>
+									<br>
+								</ul>
+							</nav>
+						</div>
+					</section>
+
+					<!-- section 7 general commands -->
 					<section id="tm-general" class="tm-section">
 						<div class="ml-auto">
 						<header class="mb-4"><h2 class="tm-text-shadow">General Commands</h2></header>
@@ -321,7 +356,7 @@
 						</div>
 					</section>
 
-					<!-- section 7 guild commands -->
+					<!-- section 8 guild commands -->
 					<section id="tm-guild" class="tm-section">
 						<div class="ml-auto">
 						<header class="mb-4"><h2 class="tm-text-shadow">Guild Commands</h2></header>
@@ -352,7 +387,7 @@
 						</div>
 					</section>
 
-					<!-- section 8 image commands -->
+					<!-- section 9 image commands -->
 					<section id="tm-image" class="tm-section">
 						<div class="ml-auto">
 						<header class="mb-4"><h2 class="tm-text-shadow">Image Commands</h2></header>
@@ -371,7 +406,7 @@
 						</div>
 					</section>
 
-					<!-- section 9 info commands -->
+					<!-- section 10 info commands -->
 					<section id="tm-info" class="tm-section">
 						<div class="ml-auto">
 						<header class="mb-4"><h2 class="tm-text-shadow">Info Commands</h2></header>
@@ -411,7 +446,7 @@
 						</div>
 					</section>
 
-					<!-- section 10 nsfw commands -->
+					<!-- section 11 nsfw commands -->
 					<section id="tm-nsfw" class="tm-section">
 						<div class="ml-auto">
 						<header class="mb-4"><h2 class="tm-text-shadow">NSFW Commands</h2></header>
@@ -438,7 +473,7 @@
 						</div>
 					</section>
 
-					<!-- section 11 tag commands -->
+					<!-- section 12 tag commands -->
 					<section id="tm-tag" class="tm-section">
 						<div class="ml-auto">
 						<header class="mb-4"><h2 class="tm-text-shadow">Tag Commands</h2></header>
