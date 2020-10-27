@@ -95,12 +95,24 @@ p:last-child { margin-bottom: 0; }
   position: relative;
 }
 
-.ml-auto-two {
-    margin-left:auto!important;
-    width: auto!important;
-    height: 100%;
+.container {
+    margin-left: auto!important;
+    height: 100vh;
+    width: auto;
+    float: left;
+    overflow: hidden;
+    margin: 20px;
+}
+.container img {
+    display: block;
 }
 
+.portrait img {
+    width: 100%;
+}
+.landscape img {
+    height: 100%;
+}
 .tm-commands-nav h5 {
     font-size: 20px;
     padding: 15px;
