@@ -97,8 +97,8 @@ p:last-child { margin-bottom: 0; }
 
 .ml-auto-two {
     margin-left:auto!important;
-    width: 100vw;
-    height: 100vh;
+    width: auto!important;
+    height: 100%;
 }
 
 .tm-commands-nav h5 {
