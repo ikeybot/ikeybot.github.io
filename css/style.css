@@ -97,7 +97,7 @@ p:last-child { margin-bottom: 0; }
 
 .container {
     margin-left: auto!important;
-    height: 100vh;
+    height: 100%;
     width: auto;
     float: left;
     overflow: hidden;
