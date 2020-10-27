@@ -241,12 +241,6 @@ p:last-child { margin-bottom: 0; }
     padding-bottom: 10px;
 }
 
-.ml-auto-two {
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-}
-
 .tm-command-list {
     padding-top: 20px;
 }
