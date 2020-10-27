@@ -95,6 +95,19 @@ p:last-child { margin-bottom: 0; }
   position: relative;
 }
 
+#iconheader img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #555;
+}
+
+#iconheader h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}
+
 .container {
     margin-left: auto!important;
     height: 100%;
