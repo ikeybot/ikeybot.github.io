@@ -97,8 +97,9 @@ p:last-child { margin-bottom: 0; }
 
 #iconheader img {
   float: left;
-  width: 100px;
-  height: 100px;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
   background: #555;
 }
 
