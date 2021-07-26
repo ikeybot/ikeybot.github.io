@@ -213,6 +213,10 @@
 									<p class="tm-command-desc">Mention a user to choke them.</p>
 									<p class="tm-command-usage">$choke @user</p>
 									<br>
+									<h5 class="tm-command-name">Dance</h5>
+									<p class="tm-command-desc">Dodge an attack (50/50 chance).</p>
+									<p class="tm-command-usage">$dance @user optional</p>
+									<br>
 									<h5 class="tm-command-name">Dodge</h5>
 									<p class="tm-command-desc">Dodge an attack (50/50 chance).</p>
 									<p class="tm-command-usage">$dodge</p>
@@ -281,11 +285,6 @@
 									<p class="tm-command-desc">Deletes a server role (requires Manage Roles permission).</p>
 									<p class="tm-command-usage">$deleterole/$dr/$delrole/$drole role name</p>
 									<br>
-									<h5 class="tm-command-name">Logs</h5>
-									<p class="tm-command-desc">Enables or disables logging (invites tracking)</p>
-									<p class="tm-command-usage">$logs channel-name (enables logs in that channel, creates channel if none exists)</p>
-									<p class="tm-command-usage">$logs (disables current log channel if already enabled) </p>
-									<br>
 									<h5 class="tm-command-name">Kick</h5>
 									<p class="tm-command-desc">Kicks a user (requires Kick Members permission).</p>
 									<p class="tm-command-usage">$kick @user optional reason</p>
@@ -318,6 +317,7 @@
 									<br>
 									<h5 class="tm-command-name">Toggle</h5>
 									<p class="tm-command-desc">Disables a command per channel, all commands, or list all currently disabled commands (requires Admin permission).</p>
+									<p class="tm-command-desc">Toggles logs, invite and member tracking.</p>
 									<p class="tm-command-usage">$toggle/$tc command/alias</p>
 									<p class="tm-command-usage">$toggle all</p>
 									<p class="tm-command-usage">$toggle list</p>
@@ -365,13 +365,29 @@
 						<header class="mb-4"><h2 class="tm-text-shadow">General Commands</h2></header>
 							<nav id="tmGeneralCommands" class="tm-command-list">
 								<ul>
+									<h5 class="tm-command-name">Calculate</h5>
+									<p class="tm-command-desc">Calculate a basic value (work in progress).</p>
+									<p class="tm-command-usage">$calculate/$c number operand number</p>
+									<br>
 									<h5 class="tm-command-name">Enlarge</h5>
 									<p class="tm-command-desc">Enlarges an emoji (work in progress).</p>
 									<p class="tm-command-usage">$enlarge/$e :emoji:</p>
 									<br>
+									<h5 class="tm-command-name">Image</h5>
+									<p class="tm-command-desc">Searches for an image on DuckDuckGo.</p>
+									<p class="tm-command-usage">$image/$img/$is/$im/$i search terms</p>
+									<br>
+									<h5 class="tm-command-name">Lyrics</h5>
+									<p class="tm-command-desc">Search Genius for song lyrics.</p>
+									<p class="tm-command-usage">$lyrics/$ly artist - song</p>
+									<br>
 									<h5 class="tm-command-name">Ping</h5>
 									<p class="tm-command-desc">Ping.</p>
 									<p class="tm-command-usage">$ping</p>
+									<br>
+									<h5 class="tm-command-name">Spotify</h5>
+									<p class="tm-command-desc">Display currently playing song (require Spotify acc linked).</p>
+									<p class="tm-command-usage">$spotify/$s</p>
 									<br>
 									<h5 class="tm-command-name">String</h5>
 									<p class="tm-command-desc">Formats a string same as tag system, for testing.</p>
@@ -462,6 +478,14 @@
 									<h5 class="tm-command-name">Profile</h5>
 									<p class="tm-command-desc">Displays detailed user information.</p>
 									<p class="tm-command-usage">$profile/$prof/$pr @user optional</p>
+									<br>
+									<h5 class="tm-command-name">Stats</h5>
+									<p class="tm-command-desc">Show the top commands used on or by a user, or globally</p>
+									<p class="tm-command-usage">$stats/$top</p>
+									<p class="tm-command-usage">$stats/$top @user</p>
+									<p class="tm-command-usage">$stats/$top command name (page number optional)</p>
+									<p class="tm-command-usage">$stats/$top command name @user (page number optional)</p>
+									<p class="tm-command-usage">$stats/$top @user command name (page number optional)</p>
 									<br>
 									<h5 class="tm-command-name">Website</h5>
 									<p class="tm-command-desc">Displays a link for the website.</p>
