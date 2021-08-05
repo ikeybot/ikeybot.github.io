@@ -206,15 +206,17 @@
 					<!-- section 5 action commands -->
 					<section id="tm-action" class="tm-section">
 						<div class="ml-auto">
-						<header class="mb-4"><h2 class="tm-text-shadow">Action Commands</h2></header>
+						<header class="mb-4"><h2 class="tm-text-shadow">Action Commands</h2><br><h4 class="tm-text-shadow">All user mentions can be done via message replies</h4>h4></header>
 							<nav id="tmActionCommands" class="tm-command-list">
 								<ul>
 									<h5 class="tm-command-name">Choke</h5>
 									<p class="tm-command-desc">Mention a user to choke them.</p>
+									<p class="tm-command-usage"><u>message reply</u> $choke</p>
 									<p class="tm-command-usage">$choke @user</p>
 									<br>
 									<h5 class="tm-command-name">Dance</h5>
 									<p class="tm-command-desc">Dodge an attack (50/50 chance).</p>
+									<p class="tm-command-usage"><u>message reply</u> $dance</p>
 									<p class="tm-command-usage">$dance @user optional</p>
 									<br>
 									<h5 class="tm-command-name">Dodge</h5>
@@ -223,46 +225,57 @@
 									<br>
 									<h5 class="tm-command-name">Hold Hands</h5>
 									<p class="tm-command-desc">Mention a user to ask them to hold hands.</p>
+									<p class="tm-command-usage"><u>message reply</u> $handhold/$hh</p>
 									<p class="tm-command-usage">$handhold/$hh @user</p>
 									<br>
 									<h5 class="tm-command-name">High Five</h5>
 									<p class="tm-command-desc">Mention a user to high five them.</p>
+									<p class="tm-command-usage"><u>message reply</u> $highfive/$hf</p>
 									<p class="tm-command-usage">$highfive/$hf @user</p>
 									<br>
 									<h5 class="tm-command-name">Hug</h5>
 									<p class="tm-command-desc">Mention a user to hug them.</p>
+									<p class="tm-command-usage"><u>message reply</u> $hug</p>
 									<p class="tm-command-usage">$hug @user</p>
 									<br>
 									<h5 class="tm-command-name">Kill</h5>
 									<p class="tm-command-desc">Mention a user to "kill" them (33% chance for choke/shoot/stab)</p>
+									<p class="tm-command-usage"><u>message reply</u> $kill/$attack</p>
 									<p class="tm-command-usage">$kill/$attack @user</p>
 									<br>
 									<h5 class="tm-command-name">Kiss</h5>
 									<p class="tm-command-desc">Mention a user to kiss them.</p>
+									<p class="tm-command-usage"><u>message reply</u> $kiss</p>
 									<p class="tm-command-usage">$kiss @user</p>
 									<br>
 									<h5 class="tm-command-name">Pat</h5>
 									<p class="tm-command-desc">Mention a user to pat them.</p>
+									<p class="tm-command-usage"><u>message reply</u> $pat/$pet</p>
 									<p class="tm-command-usage">$pat/$pet @user</p>
 									<br>
 									<h5 class="tm-command-name">Punch</h5>
 									<p class="tm-command-desc">Mention a user to shoot them.</p>
+									<p class="tm-command-usage"><u>message reply</u> $punch</p>
 									<p class="tm-command-usage">$punch @user</p>
 									<br>
 									<h5 class="tm-command-name">Shoot</h5>
 									<p class="tm-command-desc">Mention a user to shoot them.</p>
+									<p class="tm-command-usage"><u>message reply</u> $shoot</p>
 									<p class="tm-command-usage">$shoot @user</p>
 									<br>
 									<h5 class="tm-command-name">Slap</h5>
 									<p class="tm-command-desc">Mention a user to slap them.</p>
+									<p class="tm-command-usage"><u>message reply</u> $slap</p>
 									<p class="tm-command-usage">$slap @user</p>
 									<br>
 									<h5 class="tm-command-name">Spank</h5>
 									<p class="tm-command-desc">Mention a user to spank them.</p>
+									<p class="tm-command-usage"><u>message reply</u> $spank</p>
 									<p class="tm-command-usage">$spank @user</p>
 									<br>
 									<h5 class="tm-command-name">Stab</h5>
 									<p class="tm-command-desc">Mention a user to stab them.</p>
+									<p class="tm-command-usage"><u>message reply</u> $stab</p>
 									<p class="tm-command-usage">$stab @user</p>
 									<br>
 								</ul>
@@ -278,6 +291,7 @@
 								<ul>
 									<h5 class="tm-command-name">Ban</h5>
 									<p class="tm-command-desc">Bans a user (requires Ban Members permission).</p>
+									<p class="tm-command-usage"><u>message reply</u> $ban optional reason</p>
 									<p class="tm-command-usage">$ban @user optional reason</p>
 									<p class="tm-command-usage">$ban list</p>
 									<br>
@@ -287,10 +301,12 @@
 									<br>
 									<h5 class="tm-command-name">Kick</h5>
 									<p class="tm-command-desc">Kicks a user (requires Kick Members permission).</p>
+									<p class="tm-command-usage"><u>message reply</u> $kick optional reason</p>
 									<p class="tm-command-usage">$kick @user optional reason</p>
 									<br>
 									<h5 class="tm-command-name">Mute</h5>
 									<p class="tm-command-desc">Mutes a user (requires Mute Members permission).</p>
+									<p class="tm-command-usage"><u>message reply</u> $mute/$stfu 1h/30m/60s optional reason</p>
 									<p class="tm-command-usage">$mute/$stfu @user 1h/30m/60s optional reason</p>
 									<p class="tm-command-usage">$mute list</p>
 									<br>
@@ -305,6 +321,7 @@
 									<br>
 									<h5 class="tm-command-name">Role</h5>
 									<p class="tm-command-desc">Adds or removes a role from a user</p>
+									<p class="tm-command-usage"><u>message reply</u> $role role name</p>
 									<p class="tm-command-usage">$role @user role name</p>
 									<br>
 									<h5 class="tm-command-name">Unban</h5>
@@ -313,6 +330,7 @@
 									<br>
 									<h5 class="tm-command-name">Unmute</h5>
 									<p class="tm-command-desc">Unmutes a user (requires Mute Members permission).</p>
+									<p class="tm-command-usage"><u>message reply</u> $unmute</p>
 									<p class="tm-command-usage">$unmute @user</p>
 									<br>
 									<h5 class="tm-command-name">Toggle</h5>
@@ -335,19 +353,23 @@
 								<ul>
 									<h5 class="tm-command-name">Adopt</h5>
 									<p class="tm-command-desc">Adopts a user into your family (must be married)</p>
+									<p class="tm-command-usage"><u>message reply</u> $adopt/$a</p>
 									<p class="tm-command-usage">$adopt/$a @user</p>
 									<br>
 									<h5 class="tm-command-name">Disown</h5>
 									<p class="tm-command-desc">Disowns a child from your family, or disowns your parents</p>
+									<p class="tm-command-usage"><u>message reply</u> $disown/$dw</p>
 									<p class="tm-command-usage">$disown/$dw @user</p>
-									<p class="tm-command-usage">$runaway$disown/dw</p>
+									<p class="tm-command-usage">$runaway/$disown/$dw</p>
 									<br>
 									<h5 class="tm-command-name">Marry</h5>
 									<p class="tm-command-desc">Marry a user from the server, provided they're single</p>
+									<p class="tm-command-usage"><u>message reply</u> $marry/$my</p>
 									<p class="tm-command-usage">$marry/$my @user</p>
 									<br>
 									<h5 class="tm-command-name">Family</h5>
 									<p class="tm-command-desc">Displays a users (or your own) family tree</p>
+									<p class="tm-command-usage"><u>message reply</u> $family/$f</p>
 									<p class="tm-command-usage">$family/$f @user optional</p>
 									<br>
 									<h5 class="tm-command-name">Divorce</h5>
@@ -456,6 +478,7 @@
 								<ul>
 									<h5 class="tm-command-name">Avatar</h5>
 									<p class="tm-command-desc">Displays a users (or your own) avatar.</p>
+									<p class="tm-command-usage"><u>message reply</u> $avatar/$pfp/$dp/$av</p>
 									<p class="tm-command-usage">$avatar/$pfp/$dp/$av @user optional</p>
 									<br>
 									<h5 class="tm-command-name">Commands</h5>
@@ -477,6 +500,7 @@
 									<br>
 									<h5 class="tm-command-name">Profile</h5>
 									<p class="tm-command-desc">Displays detailed user information.</p>
+									<p class="tm-command-usage"><u>message reply</u> $profile/$prof/$pr</p>
 									<p class="tm-command-usage">$profile/$prof/$pr @user optional</p>
 									<br>
 									<h5 class="tm-command-name">Stats</h5>
@@ -512,6 +536,7 @@
 									<br>
 									<h5 class="tm-command-name">Fuck</h5>
 									<p class="tm-command-desc">Mention a user to ask them to fuck.</p>
+									<p class="tm-command-usage"><u>message reply</u> $fuck/$sex</p>
 									<p class="tm-command-usage">$fuck/$sex</p>
 									<br>
 									<h5 class="tm-command-name">Tights</h5>
@@ -543,6 +568,7 @@
 									<br>
 									<h5 class="tm-command-name">Gift Tag</h5>
 									<p class="tm-command-desc">Gift a tag to a user (requires tag owner).</p>
+									<p class="tm-command-usage"><u>message reply</u> $gifttag/$gtag/$gt tagname</p>
 									<p class="tm-command-usage">$gifttag/$gtag/$gt @user tagname</p>
 									<br>
 									<h5 class="tm-command-name">Random Tag</h5>
@@ -551,6 +577,7 @@
 									<br>
 									<h5 class="tm-command-name">Search Tag</h5>
 									<p class="tm-command-desc">Search for a tag,</p>
+									<p class="tm-command-usage"><u>message reply</u> $searchtag/$listtag/$st/$lt</p>
 									<p class="tm-command-usage">$searchtag/$listtag/$st/$lt tagname/@user/server</p>
 									<br>
 									<h5 class="tm-command-name">View Tag</h5>
